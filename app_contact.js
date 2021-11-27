@@ -3,6 +3,7 @@ require('dotenv').config()
 var fs = require('fs');
 var qs = require('querystring');
 var nodemailer = require('nodemailer');
+const PORT = process.env.PORT || 8000
 
 http.createServer((req, res) => {
 
@@ -66,6 +67,6 @@ http.createServer((req, res) => {
     }
 
     
-}).listen(8000);
+}).listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 console.log('server listening on http://localhost:8000/');
