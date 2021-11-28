@@ -68,5 +68,3 @@ http.createServer((req, res) => {
 
     
 }).listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
-console.log('server listening on http://localhost:8000/');
